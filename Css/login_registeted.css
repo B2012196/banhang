@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+.page{
+  margin: 0px;
+  display: grid;
+  position: relative;
+  grid-template-rows: auto;
+}
+.page__header{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+  top: 0px;
+  left: 0px;
+  border-bottom: 1px solid #00000070;
+}
+.header__logo{
+  height: 100px;
+  margin-left: 50px;
+}
+.header__title{
+  font-size: 2.5rem;
+  color: black;
+  font-family: 'Island Moments', cursive;
+}
+/* main  */
+.page__content {
+  display: flex;
+  width: 100%;
+}
+
+.content__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 50px auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.content__form input {
+  font-family: "Roboto", sans-serif;
+  /* outline: 0; */
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 8px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.warning {color: red;}
+.tip {color: grey;}
+.successful {color: green;}
+.content__form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #0776f5;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.content__form button:hover,.content__form button:active,.content__form button:focus {
+  background: #075cbf;
+}
+.content__form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 15px;
+}
+.content__form .message a {
+  color: #0776f5;
+  text-decoration: none;
+}
+.content__form .register-form {
+  display: none;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(253, 253, 253) 0%, rgb(255, 255, 255) 50%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+
+#feedback_1{
+  font-size: 0.8rem;
+  margin: 0px;
+}
+#feedback_2{
+  font-size: 0.8rem;
+  margin: 0px;
+}
+#feedback_3{
+  font-size: 0.8rem;
+  margin: 0px;
+}
