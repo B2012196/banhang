@@ -74,7 +74,7 @@ function loadShoppingCart(){
 function showCart(){
     if(localStorage.cartItems == undefined){
         alert('Your cart is empty. Please go back homepage to order items.');
-        location.href = "gio-hang.html";
+        location.href = "../index.html";
     }else{
         let custommerCart = JSON.parse(localStorage.getItem('cartItems'));
 
