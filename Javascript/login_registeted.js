@@ -4,6 +4,10 @@ const login = () => {
   event.preventDefault();
   const userData = JSON.parse(localStorage.getItem('nUser'));
 
+  if(userData === null) {
+    alert('Tai khoan khong hop le')
+    return;
+  }
   const id = document.getElementById('txtUser').value;
   const password = document.getElementById('txtPassword').value;
 
@@ -27,7 +31,6 @@ const login = () => {
       alert('Tai khoan khong hop le')
       break
     }
-
   }
 }
 
