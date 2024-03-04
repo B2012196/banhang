@@ -15,14 +15,16 @@ const login = () => {
         chkU = true;
         if (userData[i].name === name) {
             chkP = true;
-            console.log('Đăng nhập thành công');
+            alert('Đăng nhập thành công');
+            window.location.href = "../index.html"
             break; // Thoát vòng lặp khi tìm thấy thông tin đúng
         } else {
-            console.log('Sai mật khẩu');
+            aler('Mat khau khong hop le');
             break; // Thoát vòng lặp khi tìm thấy id nhưng mật khẩu sai
         }
     }
-}
+    alert('Tai khoan khong hop le')
+  }
 }
 
 function checkUsername() {                        // Declare function
@@ -67,4 +69,3 @@ submit.addEventListener('submit', login, false);
 el.addEventListener('focus', tipUsername, false); // focus call tipUsername()
 el.addEventListener('blur', checkUsername, false);// blur call checkUsername()
 elP.addEventListener('blur', checkPassword, false);// blur call checkUsername()
-// elP.addEventListener('blur', tipPassword, false);
