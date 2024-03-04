@@ -21,7 +21,7 @@ const register = () => {
               window.location.reload();
           }
           alert('Dang Ky Thanh Cong');
-          window.location.href = "../dang-nhap.html"
+          window.location.href = "dang-nhap.html"
     }
     else alert('Dang ky khong thanh cong')
 }

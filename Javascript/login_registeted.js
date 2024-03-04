@@ -16,7 +16,7 @@ const login = () => {
         if (userData[i].name === name) {
             chkP = true;
             alert('Đăng nhập thành công');
-            window.location.href = "../index.html"
+            window.location.href = "index.html"
             break; // Thoát vòng lặp khi tìm thấy thông tin đúng
         } else {
             aler('Mat khau khong hop le');
