@@ -22,10 +22,8 @@ function loadShoppingCart(){
                 price: linkClicked.parentElement.parentElement.children[4].textContent,
                 quantity: 1
             };
-            console.log(newItem)
             //Kiểm tra tồn tại trong localstore chưa, nếu chưa thì tạo mới.
             if(JSON.parse(localStorage.getItem('cartItems')) === null){
-                console.log("OK")
                 updatedCart.push(newItem);
                 localStorage.setItem('cartItems', JSON.stringify(updatedCart));
                 window.location.reload();
@@ -62,12 +60,11 @@ function loadShoppingCart(){
     });
 
     //cap nhat so item trong gio hang tren trang chu
-    if(localStorage.getItem('CartItems') !== null){
+    if(localStorage.getItem('cartItems') !== null){
         const numberOrderedItems = document.querySelector('.item-style-h .no-ordered-items');
         let numberOfItems = 0;
         let custommerCart = JSON.parse(localStorage.getItem('cartItems'));
         custommerCart.forEach(item => {
-
             numberOfItems += item.quantity;
         });
         numberOrderedItems.innerHTML = numberOfItems;

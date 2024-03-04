@@ -1,4 +1,30 @@
 //Kiểm tra Username nhap vao
+
+const login = () => {
+  event.preventDefault();
+  const userData = JSON.parse(localStorage.getItem('nUser'));
+
+  const id = document.getElementById('txtUser').value;
+  const name = document.getElementById('txtPassword').value;
+
+  let chkU = false;
+  let chkP = false;
+
+  for (let i = 0; i < userData.length; i++) {
+    if (userData[i].id === id) {
+        chkU = true;
+        if (userData[i].name === name) {
+            chkP = true;
+            console.log('Đăng nhập thành công');
+            break; // Thoát vòng lặp khi tìm thấy thông tin đúng
+        } else {
+            console.log('Sai mật khẩu');
+            break; // Thoát vòng lặp khi tìm thấy id nhưng mật khẩu sai
+        }
+    }
+}
+}
+
 function checkUsername() {                        // Declare function
   var username = el.value;                        // Store username in variable
   if (username.length < 9) {                      // If username < 5 characters
@@ -29,13 +55,16 @@ function checkPassword() {                        // Declare function
   }
 }
 
+var submit = document.getElementById('frmDangNhap');
+
 var el = document.getElementById('txtUser');     // Username input
 var elMsg = document.getElementById('feedback_1');  // Element to hold message
 
 var elP = document.getElementById('txtPassword');     // Password input
 var elPMsg = document.getElementById('feedback_2'); 
 // When the username input gains / loses focus call functions above:
+submit.addEventListener('submit', login, false);
 el.addEventListener('focus', tipUsername, false); // focus call tipUsername()
 el.addEventListener('blur', checkUsername, false);// blur call checkUsername()
 elP.addEventListener('blur', checkPassword, false);// blur call checkUsername()
-elP.addEventListener('blur', tipPassword, false);
+// elP.addEventListener('blur', tipPassword, false);
