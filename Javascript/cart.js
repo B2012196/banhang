@@ -113,13 +113,17 @@ function showCart(){
 
 function deleteCart(evt){
     let updatedCart = [];
+    
     let custommerCart = JSON.parse(localStorage.getItem('cartItems'));
     custommerCart.forEach(item => {
         if(item.id != evt.parentElement.parentElement.children[1].textContent){
             updatedCart.push(item);
         }
     });
-    localStorage.setItem('cartItems',JSON.stringify(updatedCart));
+    if(updatedCart.length === 0){
+        localStorage.removeItem('cartItems');
+    }
+    else localStorage.setItem('cartItems',JSON.stringify(updatedCart));
     window.location.reload();
 };
     ////------------Currency & Percentage format-------------------------

@@ -5,7 +5,7 @@ const login = () => {
   const userData = JSON.parse(localStorage.getItem('nUser'));
 
   const id = document.getElementById('txtUser').value;
-  const name = document.getElementById('txtPassword').value;
+  const password = document.getElementById('txtPassword').value;
 
   let chkU = false;
   let chkP = false;
@@ -13,17 +13,21 @@ const login = () => {
   for (let i = 0; i < userData.length; i++) {
     if (userData[i].id === id) {
         chkU = true;
-        if (userData[i].name === name) {
+        if (userData[i].password === password) {
             chkP = true;
             alert('Đăng nhập thành công');
             window.location.href = "index.html"
             break; // Thoát vòng lặp khi tìm thấy thông tin đúng
         } else {
-            aler('Mat khau khong hop le');
+            alert('Mat khau khong hop le');
             break; // Thoát vòng lặp khi tìm thấy id nhưng mật khẩu sai
         }
     }
-    alert('Tai khoan khong hop le')
+    else {
+      alert('Tai khoan khong hop le')
+      break
+    }
+
   }
 }
 

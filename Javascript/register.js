@@ -4,7 +4,7 @@ const register = () => {
     if((checkUsername() == true) && (checkPassword() == true)){
         var newUser = {
             id: document.getElementById('txtUser').value,
-            name: document.getElementById('txtPassword').value,
+            password: document.getElementById('txtPassword').value,
             email: document.getElementById('txtEmail').value,
           };
            
